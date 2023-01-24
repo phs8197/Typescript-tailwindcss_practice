@@ -5,12 +5,12 @@ interface ItemProps {
   data: DataProps;
 }
 
-function Item({ data }: ItemProps) {
+function Item(props: ItemProps) {
   return (
-    <div style={{ width: "300px", height: "300px" }} className="bg-white">
-      <img src={data.image} />
-      <p>{data.name}</p>
-      <p>{data.price}</p>
+    <div className="bg-white w-80 h-80">
+      <img src={props.data.image} alt="" className="w-48 h-48" />
+      <p>{props.data.name}</p>
+      <p>{props.data.price}</p>
     </div>
   );
 }
